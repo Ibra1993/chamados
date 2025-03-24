@@ -1,0 +1,8 @@
+
+tunnels:
+  frontend:
+    addr: 5173
+    proto: http
+  backend:
+    addr: 8080
+    proto: http
