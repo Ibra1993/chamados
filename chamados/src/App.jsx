@@ -45,6 +45,7 @@ import UserSoftLineForm from "./components/userSoftline/UserSoftLineForm";
 
 import NovosClientes from './components/adminSoftLine/NovosClientes';
 import ListaNovosClientes from "./components/adminSoftLine/ListaNovosClientes";
+import AvaliacaoCliente from './components/adminSoftLine/AvaliacaoCliente';
 
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation  } from "react-router-dom"; // Certifique-se de usar o nome correto
 import UserHeaders from "./components/headers/UserHeaders";
@@ -127,7 +128,8 @@ function App() {
  && location.pathname !== "/ChamadosSetorAberto" && location.pathname !== "/UserSoftlineListagem" &&
   location.pathname !== "/Login" && location.pathname !== "/NovosClientes" && location.pathname !== "/" &&
  location.pathname !== "/components/userSoftline/UserSoftlineListagem" &&
- location.pathname !== "/ListaNovosClientes" && <UserHeaders />}
+ location.pathname !== "/ListaNovosClientes" && location.pathname !== "/AvaliacaoCliente" &&
+  <UserHeaders />}
 
 
 
@@ -145,7 +147,7 @@ function App() {
 
            <Route path="/nao-autorizado" element={<NaoAutorizado />} />
 
-
+           <Route path="/AvaliacaoCliente" element={<AvaliacaoCliente />} />
 
 
                {/* Rota para o componente UserHeaders */}

@@ -52,6 +52,7 @@ export default function AdminHeaders() {
           <ul className="dropdown-menu">
             <li><a className="dropdown-item" href="/RelatorioStatusChamados">Relatório dos Status dos chamados</a></li>
             <li><a className="dropdown-item" href="/ChamadosSetorAberto">Relatório dos setores em análise/em aberto</a></li>
+            <li><a className="dropdown-item" href="/AvaliacaoCliente">Relatório da avaliação dos chamados pelos clientes</a></li>
 <li>
   <a
     className="dropdown-item"
