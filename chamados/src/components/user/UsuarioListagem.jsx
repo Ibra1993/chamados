@@ -17,6 +17,24 @@ export default function UsuarioListagem({ vetor = [] }) {
     const [modalAberto, setModalAberto] = useState(false);
     const [chamadoSelecionado, setChamadoSelecionado] = useState(null);
 
+
+
+ // Função para verificar se o usuário está autorizado
+  const verificarAutorizacao = () => {
+    // Exemplo de verificação: verifica se há um token no localStorage
+    const token = localStorage.getItem('token');
+    if (!token) {
+      // Se não houver token, redireciona para a página de não autorizado
+      window.location.href = "/nao-autorizado";
+    }
+  };
+
+  // Verifica a autorização ao carregar o componente
+  useEffect(() => {
+    verificarAutorizacao();
+  }, []);
+
+
     useEffect(() => {
         const token = localStorage.getItem("token");
         if (!token) {

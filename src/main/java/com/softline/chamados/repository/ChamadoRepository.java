@@ -67,6 +67,16 @@ public interface ChamadoRepository extends JpaRepository<Chamado, Long> {
     @Query(value = "select count(*) from chamados c where c.assuntosid = 6 and c.statuschamadoid = 1", nativeQuery = true)
     long countChmadosComercialEmAberto();
 
+    @Query(value = "SELECT count(*) FROM chamados c WHERE c.pesquisa = 'Bom'", nativeQuery = true)
+    long countChamadosBom();
 
+    @Query(value = "SELECT count(*) FROM chamados c WHERE c.pesquisa = 'Excelente'", nativeQuery = true)
+    long countChamadosExcelente();
+
+    @Query(value = "SELECT count(*) FROM chamados c WHERE c.pesquisa = 'Regular'", nativeQuery = true)
+    long countChamadosRegular();
+
+    @Query(value = "SELECT count(*) FROM chamados c WHERE c.pesquisa = 'Ruim'", nativeQuery = true)
+    long countChamadosRuim();
 
 }

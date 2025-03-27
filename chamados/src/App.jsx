@@ -128,7 +128,7 @@ function App() {
  && location.pathname !== "/ChamadosSetorAberto" && location.pathname !== "/UserSoftlineListagem" &&
   location.pathname !== "/Login" && location.pathname !== "/NovosClientes" && location.pathname !== "/" &&
  location.pathname !== "/components/userSoftline/UserSoftlineListagem" &&
- location.pathname !== "/ListaNovosClientes" && location.pathname !== "/AvaliacaoCliente" &&
+ location.pathname !== "/ListaNovosClientes" && location.pathname !== "/AvaliacaoCliente" && location.pathname !== "/nao-autorizado" &&
   <UserHeaders />}
 
 

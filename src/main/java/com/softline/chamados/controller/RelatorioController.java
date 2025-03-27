@@ -84,13 +84,41 @@ public class RelatorioController {
             response.put("implantacao", implantacao);
             response.put("comercial", comercial);
 
-
-
-
         }
 
         return response;
     }
 
+    @GetMapping("/avaliacaoSatisfacaoDoCliente")
+    @PreAuthorize("hasAnyAuthority('ADMIN')") // Exige uma das autoridades
+    public  Map<String, Object> avaliacaoSatisfacaoDoCliente(){
+
+        Map<String, Object> response = new HashMap<>();
+
+        if (chamadoRepository.totalChamados() == 0){
+
+            response.put("excelente", 0);
+            response.put("bom", 0);
+            response.put("ruim", 0);
+            response.put("regular", 0);
+
+        }else{
+
+            double excelente = ((double) chamadoRepository.countChamadosExcelente() / chamadoRepository.totalChamados()) * 100;
+            double bom = ((double) chamadoRepository.countChamadosBom() / chamadoRepository.totalChamados()) * 100;
+            double ruim = ((double) chamadoRepository.countChamadosRuim() / chamadoRepository.totalChamados()) * 100;
+            double regular = ((double) chamadoRepository.countChamadosRegular() / chamadoRepository.totalChamados()) * 100;
+
+
+            response.put("excelente", excelente);
+            response.put("bom", bom);
+            response.put("ruim", ruim);
+            response.put("regular", regular);
+
+        }
+
+        return response;
+
+    }
 
 }
