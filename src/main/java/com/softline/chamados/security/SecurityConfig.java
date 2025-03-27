@@ -84,7 +84,7 @@ public class SecurityConfig {
 
 
 
-        config.addAllowedOrigin("http://localhost:5173"); // Adicione aqui a origem do seu front-end
+        config.addAllowedOrigin("https://chamados-soft.vercel.app"); // Adicione aqui a origem do seu front-end
         config.addAllowedMethod("GET");
         config.addAllowedMethod("POST");
         config.addAllowedMethod("PUT");
