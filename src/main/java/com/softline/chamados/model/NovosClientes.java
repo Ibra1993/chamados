@@ -17,7 +17,7 @@ public class NovosClientes {
 
     private String nomeEmpresa;
     private String ramo;
-    private int qtdMaquinas;
+    private Integer qtdMaquinas;
     private int horasContratadas;
     private String endereco;
     private String pontoDeReferrencia;
